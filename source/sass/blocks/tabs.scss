@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  border-bottom: 1px solid transparentize($color: $basic-dark, $amount: 0.7);
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.tabs__link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: transparentize($color: $basic-dark, $amount: 0.7);
+  text-decoration: none;
+  letter-spacing: -0.41px;
+}
+
+.tabs__link--selected {
+  color: $basic-accent;
+}

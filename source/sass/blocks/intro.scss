@@ -18,7 +18,7 @@
   }
 }
 
-.intro__wrapper {
+.intro__container {
   @media (max-width: $mobile-width) {
     padding-left: 0;
     padding-right: 0;
@@ -99,6 +99,7 @@
 .intro__button {
   width: 340px;
   position: relative;
+  text-align: left;
 
   &::after {
     content: "";

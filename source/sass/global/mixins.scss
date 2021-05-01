@@ -50,7 +50,7 @@
   @include offset;
   font-size: 16px;
   line-height: 28px;
-  color: transparentize($basic-dark, 0.3);
+  color: transparentize($color: $basic-dark, $amount: 0.3);
 
   @media (max-width: $tablet-width) {
     text-align: center;

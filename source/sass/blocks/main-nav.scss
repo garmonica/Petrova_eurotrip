@@ -104,7 +104,7 @@
       &::before,
       &::after {
         width: 32px;
-        background-color: transparentize($basic-darkest, 0.8);
+        background-color: transparentize($color: $basic-darkest, $amount: 0.8);
         top: 0;
         bottom: 0;
         margin: auto;

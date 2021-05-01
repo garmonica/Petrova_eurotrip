@@ -36,7 +36,7 @@
 
   <main class="page-main">
     <section class="intro">
-      <div class="intro__wrapper container">
+      <div class="intro__container container">
         <div class="intro__content">
           <h1 class="intro__heading">Путешествие по Европе</h1>
           <p class="intro__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
@@ -127,122 +127,173 @@
 
     <section class="countries" id="countries">
       <h2 class="visually-hidden">Подробная информация о странах</h2>
-      <ul class="countries__tabs tabs">
-        <li class="tabs__item">
-          <a href="#">Греция</a>
-        </li>
-        <li class="tabs__item">
-          <a href="#">Албания</a>
-        </li>
-        <li class="tabs__item">
-          <a href="#">Македония</a>
-        </li>
-        <li class="tabs__item">
-          <a href="#">Черногория</a>
-        </li>
-        <li class="tabs__item">
-          <a href="#">Хорватия</a>
-        </li>
-      </ul>
-      <ul class="countries__list">
-        <li class="countries__item">
-          <h3 class="countries__title">Греция</h3>
-          <p class="countries__description">На севере Греции находится один из крупнейших комплексов монастырей,
-            расположенных на вершинах скал.
-            Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего
-            путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту
-            600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-          <a class="countries__buy" href="#">Купить тур сейчас</a>
-          <div class="countries__reviews reviews">
-            <h3 class="reviews__title">Отзывы</h3>
-            <blockquote class="reviews__block">
-              <p class="reviews__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
-                высоченные скалы. Но здесь
-                потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
+      <div class="countries__container container">
+
+        <ul class="countries__tabs tabs">
+          <li class="tabs__item">
+            <a class="tabs__link tabs__link--selected" href="#">Греция</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#">Албания</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#">Македония</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#">Черногория</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#">Хорватия</a>
+          </li>
+        </ul>
+        <ul class="countries__list">
+          <li class="countries__item countries__item--selected">
+            <div class="countries__content">
+              <h3 class="countries__title">Греция</h3>
+              <p class="countries__description">На севере Греции находится один из крупнейших комплексов монастырей,
+                расположенных на вершинах скал.
+                Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель
+                нашего
+                путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в
+                высоту
+                600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
+              <a class="countries__button button" href="#">Купить тур сейчас</a>
+            </div>
+
+            <div class="countries__wrapper">
+              <div class="countries__review review">
+                <h3 class="review__title">Отзывы</h3>
+                <blockquote class="review__block">
+                  <p class="review__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
+                    высоченные скалы. Но здесь
+                    потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю
+                    света!
+                  </p>
+                  <div class="review__author">
+                    <img class="review__avatar" src="img/reviewers/reviewer-greece.jpg"
+                      srcset="img/reviewers/reviewer-greece@2x.jpg 2x" alt="Аватар пользователя Влада Голицина">
+                    <cite class="review__name">Влада Голицина</cite>
+                  </div>
+                </blockquote>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/countries/countries-greece-mobile.webp 1x, img/countries/countries-greece-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/countries/countries-greece-tablet.webp 1x, img/countries/countries-greece-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/countries/countries-greece-desktop.webp 1x, img/countries/countries-greece-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  src="img/countries/countries-greece-mobile.jpg 1x, img/countries/countries-greece-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  src="img/countries/countries-greece-tablet.jpg 1x, img/countries/countries-greece-tablet@2x.jpg 2x">
+                <img class="countries__image" src="img/countries/countries-greece-desktop.jpg"
+                  src="img/countries/countries-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
+              </picture>
+            </div>
+          </li>
+          <li class="countries__item">
+            <div class="countries__content">
+              <h3 class="countries__title">Албания</h3>
+              <p class="countries__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
+                водой
+                и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно
+                белоснежный
+                и
+                слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
+                такого
+                мелкого состояния. </p>
+              <a class="countries__button button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="countries__review review">
+              <h3 class="review__title">Отзывы</h3>
+              <blockquote class="review__block">
+                <p class="review__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
+                  собой
+                  сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+                <div class="review__author">
+                  <img class="review__avatar" src="img/reviewers/reviewer-albania.jpg"
+                    alt="Аватар пользователя Маришка">
+                  <cite class="review__name">Маришка</cite>
+                </div>
+              </blockquote>
+            </div>
+          </li>
+          <li class="countries__item">
+            <div class="countries__content">
+              <h3 class="countries__title">Македония</h3>
+              <p class="countries__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
+                удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы
+                заберемся
+                на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.
               </p>
-              <div class="reviews__author">
-                <img src="https://www.placecage.com/c/38/38" alt="Аватар пользователя Влада Голицина">
-                <cite class="reviews__name">Влада Голицина</cite>
-              </div>
-            </blockquote>
-          </div>
-        </li>
-        <li class="countries__item">
-          <h3 class="countries__title">Албания</h3>
-          <p class="countries__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой
-            и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и
-            слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого
-            мелкого состояния. </p>
-          <a class="countries__buy" href="#">Купить тур сейчас</a>
-          <div class="countries__reviews reviews">
-            <h3 class="reviews__title">Отзывы</h3>
-            <blockquote class="reviews__block">
-              <p class="reviews__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой
-                сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-              <div class="reviews__author">
-                <img src="https://www.placecage.com/c/38/38" alt="Аватар пользователя Маришка">
-                <cite class="reviews__name">Маришка</cite>
-              </div>
-            </blockquote>
-          </div>
-        </li>
-        <li class="countries__item">
-          <h3 class="countries__title">Македония</h3>
-          <p class="countries__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
-            удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся
-            на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
-          <a class="countries__buy" href="#">Купить тур сейчас</a>
-          <div class="countries__reviews reviews">
-            <h3 class="reviews__title">Отзывы</h3>
-            <blockquote class="reviews__block">
-              <p class="reviews__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в
-                гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно
-                после долгого пути в гору.</p>
-              <div class="reviews__author">
-                <img src="https://www.placecage.com/c/38/38" alt="Аватар пользователя Михаил Кузьмин">
-                <cite class="reviews__name">Михаил Кузьмин</cite>
-              </div>
-            </blockquote>
-          </div>
-        </li>
-        <li class="countries__item">
-          <h3 class="countries__title">Черногория</h3>
-          <p class="countries__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
-            некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона
-            составляет 80 км.</p>
-          <a class="countries__buy" href="#">Купить тур сейчас</a>
-          <div class="countries__reviews reviews">
-            <h3 class="reviews__title">Отзывы</h3>
-            <blockquote class="reviews__block">
-              <p class="reviews__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
-                фильмах :) Всем советую</p>
-              <div class="reviews__author">
-                <img src="https://www.placecage.com/c/38/38" alt="Аватар пользователя Анастасия Мей">
-                <cite class="reviews__name">Анастасия Мей</cite>
-              </div>
-            </blockquote>
-          </div>
-        </li>
-        <li class="countries__item">
-          <h3 class="countries__title">Хорватия</h3>
-          <p class="countries__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
-            мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными
-            скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-          <a class="countries__buy" href="#">Купить тур сейчас</a>
-          <div class="countries__reviews reviews">
-            <h3 class="reviews__title">Отзывы</h3>
-            <blockquote class="reviews__block">
-              <p class="reviews__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то,
-                что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с
-                чем не спутать по итогу :)</p>
-              <div class="reviews__author">
-                <img src="https://www.placecage.com/c/38/38" alt="Аватар пользователя Владимир Мулицин">
-                <cite class="reviews__name">Владимир Мулицин</cite>
-              </div>
-            </blockquote>
-          </div>
-        </li>
-      </ul>
+              <a class="countries__button button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="countries__review review">
+              <h3 class="review__title">Отзывы</h3>
+              <blockquote class="review__block">
+                <p class="review__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в
+                  гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила,
+                  особенно
+                  после долгого пути в гору.</p>
+                <div class="review__author">
+                  <img class="review__avatar" src="img/reviewers/reviewer-macedonia.jpg"
+                    alt="Аватар пользователя Михаил Кузьмин">
+                  <cite class="review__name">Михаил Кузьмин</cite>
+                </div>
+              </blockquote>
+            </div>
+          </li>
+          <li class="countries__item">
+            <div class="countries__content">
+              <h3 class="countries__title">Черногория</h3>
+              <p class="countries__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который
+                в
+                некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
+                каньона
+                составляет 80 км.</p>
+              <a class="countries__button button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="countries__review review">
+              <h3 class="review__title">Отзывы</h3>
+              <blockquote class="review__block">
+                <p class="review__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
+                  фильмах :) Всем советую</p>
+                <div class="review__author">
+                  <img class="review__avatar" src="img/reviewers/reviewer-montenegro.jpg"
+                    alt="Аватар пользователя Анастасия Мей">
+                  <cite class="review__name">Анастасия Мей</cite>
+                </div>
+              </blockquote>
+            </div>
+          </li>
+          <li class="countries__item">
+            <div class="countries__content">
+              <h3 class="countries__title">Хорватия</h3>
+              <p class="countries__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее
+                подземный
+                мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
+                нерукотворными
+                скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
+              <a class="countries__button button" href="#">Купить тур сейчас</a>
+            </div>
+            <div class="countries__review review">
+              <h3 class="review__title">Отзывы</h3>
+              <blockquote class="review__block">
+                <p class="review__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А
+                  то,
+                  что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с
+                  чем не спутать по итогу :)</p>
+                <div class="review__author">
+                  <img class="review__avatar" src="img/reviewers/reviewer-croatia.jpg"
+                    alt="Аватар пользователя Владимир Мулицин">
+                  <cite class="review__name">Владимир Мулицин</cite>
+                </div>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="prices" id="prices">

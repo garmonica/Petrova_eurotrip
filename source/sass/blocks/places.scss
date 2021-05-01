@@ -1,3 +1,9 @@
+.places {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
+}
+
 .places__heading {
   @include heading-style;
   max-width: 380px;
@@ -97,7 +103,7 @@
   text-decoration: none;
   letter-spacing: 2px;
   color: $basic-white;
-  border: 1px solid transparentize($basic-white, 0.3);
+  border: 1px solid transparentize($color: $basic-white, $amount:  0.3);
 }
 
 .places__item:hover {
@@ -111,7 +117,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: transparentize($basic-darkest, 0.4);
+    background-color: transparentize($color: $basic-darkest, $amount: 0.4);
     z-index: $places-item-hover;
   }
 }
