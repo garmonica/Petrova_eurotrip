@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  padding: 30px 38px;
+  box-sizing: border-box;
+  background-color: $basic-accent;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding: 20px 40px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+  }
+
+  &:hover {
+    background-color: $basic-accent-hover;
+  }
+}
