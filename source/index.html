@@ -13,12 +13,13 @@
   <header class="page-header">
     <nav class="main-nav main-nav--nojs main-nav--closed container">
       <a class="main-nav__logo">
-        <img src="img/logo-way.svg" width="57" height="22" alt="Логотип туристической фирмы «Way»">
+        <img class="main-nav__logo-image" src="img/logo-way.svg" width="57" height="22"
+          alt="Логотип туристической фирмы «Way»">
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия и закрытия меню"></button>
       <ul class="main-nav__list site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#about-trip">О путешествии</a>
+          <a class="site-nav__link" href="#places">О путешествии</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="#prices">Цены</a>
@@ -42,50 +43,89 @@
             также
             потрясающая красота
             природы.</p>
-          <a class="intro__button button">Смотреть тур</a>
+          <a class="intro__button button" href="#countries">Смотреть тур</a>
         </div>
       </div>
     </section>
 
-    <section class="places container" id="about-trip">
+    <section class="places container" id="places">
       <h2 class="places__heading">Места посещения</h2>
       <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="places__list">
         <li class="places__item">
-          <a class="places__link">
-            <img class="places__image" src="https://www.placecage.com/c/350/430" alt="Вилла на скалах в Греции">
-            <h3 class="places__title">Греция</h3>
-          </a>
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/places/places-greece-mobile.webp 1x, img/places/places-greece-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/places/places-greece-desktop.webp 1x, img/places/places-greece-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/places/places-greece-mobile.jpg 1x, img/places/places-greece-mobile@2x.jpg 2x">
+            <img class="places__image" src="img/places/places-greece-desktop.jpg"
+              srcset="img/places/places-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
+          </picture>
+          <h3 class="places__title">Греция</h3>
+          <a class="places__link" href="#">Смотреть подробнее</a>
         </li>
         <li class="places__item">
-          <a class="places__link">
-            <img class="places__image" src="https://www.placecage.com/c/350/430" alt="Вид с воздуха на залив Албании">
-            <h3 class="places__title">Албания</h3>
-          </a>
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/places/places-albania-mobile.webp 1x, img/places/places-albania-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/places/places-albania-desktop.webp 1x, img/places/places-albania-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/places/places-albania-mobile.jpg 1x, img/places/places-albania-mobile@2x.jpg 2x">
+            <img class="places__image" src="img/places/places-albania-desktop.jpg"
+              srcset="img/places/places-albania-desktop@2x.jpg 2x" alt="Вид с воздуха на залив Албании">
+          </picture>
+          <h3 class="places__title">Албания</h3>
+          <a class="places__link" href="#">Смотреть подробнее</a>
         </li>
         <li class="places__item">
-          <a class="places__link">
-            <img class="places__image" src="https://www.placecage.com/c/350/430"
-              alt="Достопримечательность в Македонии">
-            <h3 class="places__title">Македония</h3>
-          </a>
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/places/places-macedonia-mobile.webp 1x, img/places/places-macedonia-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/places/places-macedonia-desktop.webp 1x, img/places/places-macedonia-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/places/places-macedonia-mobile.jpg 1x, img/places/places-macedonia-mobile@2x.jpg 2x">
+            <img class="places__image" src="img/places/places-macedonia-desktop.jpg"
+              srcset="img/places/places-macedonia-desktop@2x.jpg 2x" alt="Достопримечательность в Македонии">
+          </picture>
+          <h3 class="places__title">Македония</h3>
+          <a class="places__link" href="#">Смотреть подробнее</a>
         </li>
         <li class="places__item">
-          <a class="places__link">
-            <img class="places__image" src="https://www.placecage.com/c/350/430" alt="Лесная река в Черногории">
-            <h3 class="places__title">Черногория</h3>
-          </a>
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/places/places-montenegro-mobile.webp 1x, img/places/places-montenegro-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/places/places-montenegro-desktop.webp 1x, img/places/places-montenegro-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/places/places-montenegro-mobile.jpg 1x, img/places/places-montenegro-mobile@2x.jpg 2x">
+            <img class="places__image" src="img/places/places-montenegro-desktop.jpg"
+              srcset="img/places/places-montenegro-desktop@2x.jpg 2x" alt="Лесная река в Черногории">
+          </picture>
+          <h3 class="places__title">Черногория</h3>
+          <a class="places__link" href="#">Смотреть подробнее</a>
         </li>
         <li class="places__item">
-          <a class="places__link">
-            <img class="places__image" src="https://www.placecage.com/c/350/430" alt="В пещере Хорватии">
-            <h3 class="places__title">Хорватия</h3>
-          </a>
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/places/places-croatia-mobile.webp 1x, img/places/places-croatia-mobile@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/places/places-croatia-desktop.webp 1x, img/places/places-croatia-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)"
+              srcset="img/places/places-croatia-mobile.jpg 1x, img/places/places-croatia-mobile@2x.jpg 2x">
+            <img class="places__image" src="img/places/places-croatia-desktop.jpg"
+              srcset="img/places/places-croatia-desktop@2x.jpg 2x" alt="В пещере Хорватии">
+          </picture>
+          <h3 class="places__title">Хорватия</h3>
+          <a class="places__link" href="#">Смотреть подробнее</a>
         </li>
       </ul>
     </section>
 
-    <section class="countries">
+    <section class="countries" id="countries">
       <h2 class="visually-hidden">Подробная информация о странах</h2>
       <ul class="countries__tabs tabs">
         <li class="tabs__item">
