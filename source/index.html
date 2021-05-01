@@ -11,9 +11,9 @@
 
 <body class="page__body">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--nojs main-nav--closed container">
       <a class="main-nav__logo">
-        <img src="https://www.placecage.com/c/57/22" width="57" height="22" alt="Логотип туристической фирмы «Way»">
+        <img src="img/logo-way.svg" width="57" height="22" alt="Логотип туристической фирмы «Way»">
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Кнопка открытия и закрытия меню"></button>
       <ul class="main-nav__list site-nav">
@@ -24,7 +24,10 @@
           <a class="site-nav__link" href="#prices">Цены</a>
         </li>
       </ul>
-      <a class="main-nav__phone" href="tel:+749978468446" aria-label="Позвонить по телефону 849978468446">
+      <a class="main-nav__phone-link" href="tel:+749978468446" aria-label="Позвонить по телефону 849978468446">
+        <svg class="main-nav__phone-icon" width="17" height="24">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
         +7 (499) -784-684-46
       </a>
     </nav>
@@ -32,13 +35,19 @@
 
   <main class="page-main">
     <section class="intro">
-      <h1 class="intro__heading">Путешествие по Европе</h1>
-      <p class="intro__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
-        потрясающая красота
-        природы.</p>
-      <a class="intro__anchor">Смотреть тур</a>
+      <div class="intro__wrapper container">
+        <div class="intro__content">
+          <h1 class="intro__heading">Путешествие по Европе</h1>
+          <p class="intro__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
+            также
+            потрясающая красота
+            природы.</p>
+          <a class="intro__button button">Смотреть тур</a>
+        </div>
+      </div>
     </section>
-    <section class="places">
+
+    <section class="places container" id="about-trip">
       <h2 class="places__heading">Места посещения</h2>
       <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="places__list">
@@ -195,7 +204,8 @@
         </li>
       </ul>
     </section>
-    <section class="prices">
+
+    <section class="prices" id="prices">
       <h2 class="prices__heading">Цены</h2>
       <p class="prices__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от
         Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
@@ -231,6 +241,7 @@
         </li>
       </ul>
     </section>
+
     <section class="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="feedback__block">
@@ -277,6 +288,8 @@
         помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
     </section>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 

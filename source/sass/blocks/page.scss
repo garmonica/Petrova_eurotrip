@@ -4,3 +4,14 @@
   font-size: 16px;
   line-height: 28px;
 }
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  margin: 0;
+  background-color: $basic-white;
+  color: $basic-dark;
+}
