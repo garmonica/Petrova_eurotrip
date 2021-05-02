@@ -4,10 +4,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: -270px;
+  margin-bottom: 138px;
 
   @media (max-width: $tablet-width) {
     display: block;
     margin-top: 0;
+    margin-bottom: 124px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
   }
 }
 

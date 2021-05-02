@@ -10,6 +10,7 @@
 
   @media (max-width: $mobile-width) {
     display: block;
+    margin: 0;
     padding: 0;
   }
 }
@@ -33,7 +34,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
   }
 }
 
