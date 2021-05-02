@@ -4,28 +4,18 @@
 
   @media (max-width: $tablet-width) {
     min-height: auto;
+    margin-bottom: 82px;
     background: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 56px;
   }
 }
 
 .countries__container {
   @media (max-width: $tablet-width) {
     padding: 0;
-  }
-}
-
-.countries__tabs {
-  @include reset-list;
-  margin-bottom: 92px;
-  padding-bottom: 10px;
-
-  @media (max-width: $tablet-width) {
-    margin: 0 38px 33px;
-    overflow: hidden;
-  }
-
-  @media (max-width: $tablet-width) {
-    flex-wrap: wrap;
   }
 }
 
@@ -72,10 +62,6 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
-  }
-
-  &::after {
-    width: 175px;
   }
 }
 

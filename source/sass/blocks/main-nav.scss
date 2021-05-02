@@ -93,6 +93,7 @@
 }
 
 .main-nav__phone-icon {
+  fill: currentColor;
   margin-right: 15px;
 }
 
@@ -122,11 +123,17 @@
   }
 
   .main-nav__list {
-    padding-top: 134px;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    z-index: $menu-dropdown;
+    @media (max-width: $tablet-width) {
+      min-height: 280px;
+      padding-top: 134px;
+      position: absolute;
+      top: 0;
+      z-index: $menu-dropdown;
+    }
+
+    @media (max-width: $mobile-width) {
+      min-height: 355px;
+    }
   }
 }
 

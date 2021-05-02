@@ -128,24 +128,25 @@
     <section class="countries" id="countries">
       <h2 class="visually-hidden">Подробная информация о странах</h2>
       <div class="countries__container container">
-
-        <ul class="countries__tabs tabs">
-          <li class="tabs__item">
-            <a class="tabs__link tabs__link--selected" href="#">Греция</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#">Албания</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#">Македония</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#">Черногория</a>
-          </li>
-          <li class="tabs__item">
-            <a class="tabs__link" href="#">Хорватия</a>
-          </li>
-        </ul>
+        <div class="countries__tabs tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <a class="tabs__link tabs__link--selected" href="#">Греция</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#">Албания</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#">Македония</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#">Черногория</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#">Хорватия</a>
+            </li>
+          </ul>
+        </div>
         <ul class="countries__list">
           <li class="countries__item countries__item--selected">
             <div class="countries__content">
@@ -296,18 +297,26 @@
       </div>
     </section>
 
-    <section class="prices" id="prices">
-      <h2 class="prices__heading">Цены</h2>
-      <p class="prices__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь от
-        Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
-      <p class="prices__call-us">Свяжитесь с нами</p>
-      <a class="prices__phone" href="tel:+749978468446" aria-label="Позвонить по телефону 849978468446">
-        +7 (499) -784-684-46
-      </a>
+    <section class="prices container" id="prices">
+      <div class="prices__wrapper">
+        <h2 class="prices__heading">Цены</h2>
+        <p class="prices__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
+          от
+          Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
+        <p class="prices__call-us">Свяжитесь с нами</p>
+        <a class="prices__phone" href="tel:+749978468446" aria-label="Позвонить по телефону 849978468446">
+          <svg class="prices__phone-icon" width="17" height="24">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
+      </div>
       <ul class="prices__tours tours">
         <li class="tours__item">
-          <h3 class="tours__title">Комплексный</h3>
-          <p class="tours__price">$1999</p>
+          <div class="tours__wrapper">
+            <h3 class="tours__title">Комплексный</h3>
+            <p class="tours__price">$1999</p>
+          </div>
           <p class="tours__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="tours__services-list">
             <li class="tours__services-item">Разработанный маршрут с гидом группы</li>
@@ -315,11 +324,13 @@
             <li class="tours__services-item">Завтраки, ужины в отелях и ланчи на природе</li>
             <li class="tours__services-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <a href="#">купить тур сейчас</a>
+          <a class="tours__button button" href="#">купить тур сейчас</a>
         </li>
         <li class="tours__item">
-          <h3 class="tours__title">Экономный</h3>
-          <p class="tours__price">$1399</p>
+          <div class="tours__wrapper">
+            <h3 class="tours__title">Экономный</h3>
+            <p class="tours__price">$1399</p>
+          </div>
           <p class="tours__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="tours__services-list">
             <li class="tours__services-item">Разработанный маршрут с гидом группы</li>
@@ -328,7 +339,7 @@
             <li class="tours__services-item">Только завтраки в отелях</li>
             <li class="tours__services-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <a href="#">купить тур сейчас</a>
+          <a class="tours__button button" href="#">купить тур сейчас</a>
         </li>
       </ul>
     </section>
