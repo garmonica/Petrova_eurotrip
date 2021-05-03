@@ -1,6 +1,8 @@
 .tabs {
   min-height: 40px;
   margin-bottom: 92px;
+  padding-top: 20px;
+  margin-top: -20px;
   position: relative;
   overflow: hidden;
 
@@ -18,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   border-bottom: 1px solid transparentize($color: $basic-dark, $amount: 0.7);
 

@@ -64,7 +64,7 @@
               srcset="img/places/places-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
           </picture>
           <h3 class="places__title">Греция</h3>
-          <a class="places__link" href="#">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="greece">Смотреть подробнее</a>
         </li>
         <li class="places__item">
           <picture>
@@ -78,7 +78,7 @@
               srcset="img/places/places-albania-desktop@2x.jpg 2x" alt="Вид с воздуха на залив Албании">
           </picture>
           <h3 class="places__title">Албания</h3>
-          <a class="places__link" href="#">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="albania">Смотреть подробнее</a>
         </li>
         <li class="places__item">
           <picture>
@@ -92,7 +92,7 @@
               srcset="img/places/places-macedonia-desktop@2x.jpg 2x" alt="Достопримечательность в Македонии">
           </picture>
           <h3 class="places__title">Македония</h3>
-          <a class="places__link" href="#">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="macedonia">Смотреть подробнее</a>
         </li>
         <li class="places__item">
           <picture>
@@ -106,7 +106,7 @@
               srcset="img/places/places-montenegro-desktop@2x.jpg 2x" alt="Лесная река в Черногории">
           </picture>
           <h3 class="places__title">Черногория</h3>
-          <a class="places__link" href="#">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="montenegro">Смотреть подробнее</a>
         </li>
         <li class="places__item">
           <picture>
@@ -120,7 +120,7 @@
               srcset="img/places/places-croatia-desktop@2x.jpg 2x" alt="В пещере Хорватии">
           </picture>
           <h3 class="places__title">Хорватия</h3>
-          <a class="places__link" href="#">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="croatia">Смотреть подробнее</a>
         </li>
       </ul>
     </section>
@@ -131,24 +131,24 @@
         <div class="countries__tabs tabs">
           <ul class="tabs__list">
             <li class="tabs__item">
-              <a class="tabs__link tabs__link--selected" href="#">Греция</a>
+              <a class="tabs__link tabs__link--selected" href="" data-tab="greece">Греция</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Албания</a>
+              <a class="tabs__link" href="" data-tab="albania">Албания</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Македония</a>
+              <a class="tabs__link" href="" data-tab="macedonia">Македония</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Черногория</a>
+              <a class="tabs__link" href="" data-tab="montenegro">Черногория</a>
             </li>
             <li class="tabs__item">
-              <a class="tabs__link" href="#">Хорватия</a>
+              <a class="tabs__link" href="" data-tab="croatia">Хорватия</a>
             </li>
           </ul>
         </div>
         <ul class="countries__list">
-          <li class="countries__item countries__item--selected">
+          <li class="countries__item countries__item--greece countries__item--selected">
             <div class="countries__content">
               <h3 class="countries__title">Греция</h3>
               <p class="countries__description">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -158,9 +158,8 @@
                 путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в
                 высоту
                 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-              <a class="countries__button button" href="#">Купить тур сейчас</a>
+              <a class="countries__button button" href="">Купить тур сейчас</a>
             </div>
-
             <div class="countries__wrapper">
               <div class="countries__review review">
                 <h3 class="review__title">Отзывы</h3>
@@ -185,15 +184,15 @@
                 <source type="image/webp"
                   srcset="img/countries/countries-greece-desktop.webp 1x, img/countries/countries-greece-desktop@2x.webp 2x">
                 <source media="(max-width: 767px)"
-                  src="img/countries/countries-greece-mobile.jpg 1x, img/countries/countries-greece-mobile@2x.jpg 2x">
+                  srcset="img/countries/countries-greece-mobile.jpg 1x, img/countries/countries-greece-mobile@2x.jpg 2x">
                 <source media="(max-width: 1023px)"
-                  src="img/countries/countries-greece-tablet.jpg 1x, img/countries/countries-greece-tablet@2x.jpg 2x">
+                  srcset="img/countries/countries-greece-tablet.jpg 1x, img/countries/countries-greece-tablet@2x.jpg 2x">
                 <img class="countries__image" src="img/countries/countries-greece-desktop.jpg"
-                  src="img/countries/countries-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
+                  srcset="img/countries/countries-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
               </picture>
             </div>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--albania">
             <div class="countries__content">
               <h3 class="countries__title">Албания</h3>
               <p class="countries__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
@@ -204,23 +203,39 @@
                 слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
                 такого
                 мелкого состояния. </p>
-              <a class="countries__button button" href="#">Купить тур сейчас</a>
+              <a class="countries__button button" href="">Купить тур сейчас</a>
             </div>
-            <div class="countries__review review">
-              <h3 class="review__title">Отзывы</h3>
-              <blockquote class="review__block">
-                <p class="review__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
-                  собой
-                  сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-                <div class="review__author">
-                  <img class="review__avatar" src="img/reviewers/reviewer-albania.jpg"
-                    alt="Аватар пользователя Маришка">
-                  <cite class="review__name">Маришка</cite>
-                </div>
-              </blockquote>
+            <div class="countries__wrapper">
+              <div class="countries__review review">
+                <h3 class="review__title">Отзывы</h3>
+                <blockquote class="review__block">
+                  <p class="review__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
+                    собой
+                    сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+                  <div class="review__author">
+                    <img class="review__avatar" src="img/reviewers/reviewer-albania.jpg"
+                      srcset="img/reviewers/reviewer-albania@2x.jpg 2x" alt="Аватар пользователя Маришка">
+                    <cite class="review__name">Маришка</cite>
+                  </div>
+                </blockquote>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/countries/countries-albania-mobile.webp 1x, img/countries/countries-albania-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/countries/countries-albania-tablet.webp 1x, img/countries/countries-albania-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/countries/countries-albania-desktop.webp 1x, img/countries/countries-albania-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/countries/countries-albania-mobile.jpg 1x, img/countries/countries-albania-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/countries/countries-albania-tablet.jpg 1x, img/countries/countries-albania-tablet@2x.jpg 2x">
+                <img class="countries__image" src="img/countries/countries-albania-desktop.jpg"
+                  srcset="img/countries/countries-albania-desktop@2x.jpg 2x" alt="Вид с воздуха на залив Албании">
+              </picture>
             </div>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--macedonia">
             <div class="countries__content">
               <h3 class="countries__title">Македония</h3>
               <p class="countries__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
@@ -228,24 +243,41 @@
                 заберемся
                 на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.
               </p>
-              <a class="countries__button button" href="#">Купить тур сейчас</a>
+              <a class="countries__button button" href="">Купить тур сейчас</a>
             </div>
-            <div class="countries__review review">
-              <h3 class="review__title">Отзывы</h3>
-              <blockquote class="review__block">
-                <p class="review__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в
-                  гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила,
-                  особенно
-                  после долгого пути в гору.</p>
-                <div class="review__author">
-                  <img class="review__avatar" src="img/reviewers/reviewer-macedonia.jpg"
-                    alt="Аватар пользователя Михаил Кузьмин">
-                  <cite class="review__name">Михаил Кузьмин</cite>
-                </div>
-              </blockquote>
+            <div class="countries__wrapper">
+              <div class="countries__review review">
+                <h3 class="review__title">Отзывы</h3>
+                <blockquote class="review__block">
+                  <p class="review__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем
+                    в
+                    гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила,
+                    особенно
+                    после долгого пути в гору.</p>
+                  <div class="review__author">
+                    <img class="review__avatar" src="img/reviewers/reviewer-macedonia.jpg"
+                      srcset="img/reviewers/reviewer-macedonia@2x.jpg 2x" alt="Аватар пользователя Михаил Кузьмин">
+                    <cite class="review__name">Михаил Кузьмин</cite>
+                  </div>
+                </blockquote>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/countries/countries-macedonia-mobile.webp 1x, img/countries/countries-macedonia-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/countries/countries-macedonia-tablet.webp 1x, img/countries/countries-macedonia-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/countries/countries-macedonia-desktop.webp 1x, img/countries/countries-macedonia-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/countries/countries-macedonia-mobile.jpg 1x, img/countries/countries-macedonia-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/countries/countries-macedonia-tablet.jpg 1x, img/countries/countries-macedonia-tablet@2x.jpg 2x">
+                <img class="countries__image" src="img/countries/countries-macedonia-desktop.jpg"
+                  srcset="img/countries/countries-macedonia-desktop@2x.jpg 2x" alt="Достопримечательность в Македонии">
+              </picture>
             </div>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--montenegro">
             <div class="countries__content">
               <h3 class="countries__title">Черногория</h3>
               <p class="countries__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который
@@ -253,22 +285,38 @@
                 некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
                 каньона
                 составляет 80 км.</p>
-              <a class="countries__button button" href="#">Купить тур сейчас</a>
+              <a class="countries__button button" href="">Купить тур сейчас</a>
             </div>
-            <div class="countries__review review">
-              <h3 class="review__title">Отзывы</h3>
-              <blockquote class="review__block">
-                <p class="review__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
-                  фильмах :) Всем советую</p>
-                <div class="review__author">
-                  <img class="review__avatar" src="img/reviewers/reviewer-montenegro.jpg"
-                    alt="Аватар пользователя Анастасия Мей">
-                  <cite class="review__name">Анастасия Мей</cite>
-                </div>
-              </blockquote>
+            <div class="countries__wrapper">
+              <div class="countries__review review">
+                <h3 class="review__title">Отзывы</h3>
+                <blockquote class="review__block">
+                  <p class="review__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
+                    фильмах :) Всем советую</p>
+                  <div class="review__author">
+                    <img class="review__avatar" src="img/reviewers/reviewer-montenegro.jpg"
+                      srcset="img/reviewers/reviewer-montenegro@2x.jpg 2x" alt="Аватар пользователя Анастасия Мей">
+                    <cite class="review__name">Анастасия Мей</cite>
+                  </div>
+                </blockquote>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/countries/countries-montenegro-mobile.webp 1x, img/countries/countries-montenegro-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/countries/countries-montenegro-tablet.webp 1x, img/countries/countries-montenegro-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/countries/countries-montenegro-desktop.webp 1x, img/countries/countries-montenegro-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/countries/countries-montenegro-mobile.jpg 1x, img/countries/countries-montenegro-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/countries/countries-montenegro-tablet.jpg 1x, img/countries/countries-montenegro-tablet@2x.jpg 2x">
+                <img class="countries__image" src="img/countries/countries-montenegro-desktop.jpg"
+                  srcset="img/countries/countries-montenegro-desktop@2x.jpg 2x" alt="Лесная река в Черногории">
+              </picture>
             </div>
           </li>
-          <li class="countries__item">
+          <li class="countries__item countries__item--croatia">
             <div class="countries__content">
               <h3 class="countries__title">Хорватия</h3>
               <p class="countries__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее
@@ -276,21 +324,38 @@
                 мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
                 нерукотворными
                 скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-              <a class="countries__button button" href="#">Купить тур сейчас</a>
+              <a class="countries__button button" href="">Купить тур сейчас</a>
             </div>
-            <div class="countries__review review">
-              <h3 class="review__title">Отзывы</h3>
-              <blockquote class="review__block">
-                <p class="review__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А
-                  то,
-                  что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с
-                  чем не спутать по итогу :)</p>
-                <div class="review__author">
-                  <img class="review__avatar" src="img/reviewers/reviewer-croatia.jpg"
-                    alt="Аватар пользователя Владимир Мулицин">
-                  <cite class="review__name">Владимир Мулицин</cite>
-                </div>
-              </blockquote>
+            <div class="countries__wrapper">
+              <div class="countries__review review">
+                <h3 class="review__title">Отзывы</h3>
+                <blockquote class="review__block">
+                  <p class="review__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А
+                    то,
+                    что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни
+                    с
+                    чем не спутать по итогу :)</p>
+                  <div class="review__author">
+                    <img class="review__avatar" src="img/reviewers/reviewer-croatia.jpg"
+                      srcset="img/reviewers/reviewer-croatia@2x.jpg 2x" alt="Аватар пользователя Владимир Мулицин">
+                    <cite class="review__name">Владимир Мулицин</cite>
+                  </div>
+                </blockquote>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/countries/countries-croatia-mobile.webp 1x, img/countries/countries-croatia-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/countries/countries-croatia-tablet.webp 1x, img/countries/countries-croatia-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/countries/countries-croatia-desktop.webp 1x, img/countries/countries-croatia-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="img/countries/countries-croatia-mobile.jpg 1x, img/countries/countries-croatia-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/countries/countries-croatia-tablet.jpg 1x, img/countries/countries-croatia-tablet@2x.jpg 2x">
+                <img class="countries__image" src="img/countries/countries-croatia-desktop.jpg"
+                  srcset="img/countries/countries-croatia-desktop@2x.jpg 2x" alt="В пещере Хорватии">
+              </picture>
             </div>
           </li>
         </ul>
@@ -324,7 +389,7 @@
             <li class="tours__services-item">Завтраки, ужины в отелях и ланчи на природе</li>
             <li class="tours__services-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <a class="tours__button button" href="#">купить тур сейчас</a>
+          <a class="tours__button button" href="">купить тур сейчас</a>
         </li>
         <li class="tours__item">
           <div class="tours__wrapper">
@@ -339,7 +404,7 @@
             <li class="tours__services-item">Только завтраки в отелях</li>
             <li class="tours__services-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <a class="tours__button button" href="#">купить тур сейчас</a>
+          <a class="tours__button button" href="">купить тур сейчас</a>
         </li>
       </ul>
     </section>
@@ -356,7 +421,7 @@
             <input class="feedback__input" type="email" placeholder="E-mail"
               aria-label="Поле для ввода адреса электронной почты">
           </div>
-          <button class="feedback__button button" type="submit" class="feedback__submit">Отправить</button>
+          <button class="feedback__button button" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -367,25 +432,25 @@
       <h2 class="next-trips__heading">Следующие путешествия</h2>
       <ul class="next-trips__list">
         <li class="next-trips__column">
-          <a class="next-trips__link" href="#">Марсель</a>
-          <a class="next-trips__link" href="#">Ним</a>
-          <a class="next-trips__link" href="#">Монпелье</a>
-          <a class="next-trips__link" href="#">Барселона</a>
-          <a class="next-trips__link" href="#">Пальма</a>
+          <a class="next-trips__link" href="">Марсель</a>
+          <a class="next-trips__link" href="">Ним</a>
+          <a class="next-trips__link" href="">Монпелье</a>
+          <a class="next-trips__link" href="">Барселона</a>
+          <a class="next-trips__link" href="">Пальма</a>
         </li>
         <li class="next-trips__column">
-          <a class="next-trips__link" href="#">Сардиния</a>
-          <a class="next-trips__link" href="#">Палермо</a>
-          <a class="next-trips__link" href="#">Катания</a>
-          <a class="next-trips__link" href="#">Неаполь</a>
-          <a class="next-trips__link" href="#">Рим</a>
+          <a class="next-trips__link" href="">Сардиния</a>
+          <a class="next-trips__link" href="">Палермо</a>
+          <a class="next-trips__link" href="">Катания</a>
+          <a class="next-trips__link" href="">Неаполь</a>
+          <a class="next-trips__link" href="">Рим</a>
         </li>
         <li class="next-trips__column">
-          <a class="next-trips__link" href="#">Корс</a>
-          <a class="next-trips__link" href="#">Ницца</a>
-          <a class="next-trips__link" href="#">Монако</a>
-          <a class="next-trips__link" href="#">Динь-ле-Бен</a>
-          <a class="next-trips__link" href="#">Гренобль</a>
+          <a class="next-trips__link" href="">Корс</a>
+          <a class="next-trips__link" href="">Ницца</a>
+          <a class="next-trips__link" href="">Монако</a>
+          <a class="next-trips__link" href="">Динь-ле-Бен</a>
+          <a class="next-trips__link" href="">Гренобль</a>
         </li>
       </ul>
     </section>

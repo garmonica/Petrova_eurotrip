@@ -1,5 +1,5 @@
 .countries {
-  min-height: 1220px;
+  padding-bottom: 490px;
   background: url("../../img/bg-countries.svg") center 130px / 1444px auto no-repeat;
 
   @media (max-width: $tablet-width) {
@@ -31,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  align-items: flex-start;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -103,6 +104,7 @@
 }
 
 .countries__wrapper {
+  min-height: 580px;
   flex-grow: 1;
   position: relative;
   display: flex;
