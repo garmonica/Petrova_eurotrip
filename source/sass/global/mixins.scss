@@ -56,3 +56,11 @@
     text-align: center;
   }
 }
+
+@mixin footer-headings-style {
+  @include offset;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $basic-darkest;
+}
