@@ -23,6 +23,7 @@
   top: 20px;
   left: 0;
   border-bottom: 1px solid transparentize($color: $basic-dark, $amount: 0.7);
+  touch-action: none;
 
   @media (max-width: $tablet-width) {
     margin: 0 38px;
