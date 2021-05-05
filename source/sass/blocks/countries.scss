@@ -42,7 +42,7 @@
 .countries__content {
   margin-right: 100px;
   position: relative;
-  z-index: $countries;
+  z-index: $zindex-countries;
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
@@ -95,7 +95,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: $countries-image;
+  z-index: $zindex-countries-image;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -126,7 +126,7 @@
 
 .countries__review {
   position: relative;
-  z-index: $countries;
+  z-index: $zindex-countries;
 
   @media (max-width: $tablet-width) {
     margin: 0 auto;

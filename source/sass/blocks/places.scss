@@ -118,7 +118,7 @@
 .places__item:hover {
   .places__link {
     display: flex;
-    z-index: $places-link;
+    z-index: $zindex-places-link;
   }
 
   &::before {
@@ -127,7 +127,7 @@
     width: 100%;
     height: 100%;
     background-color: transparentize($color: $basic-darkest, $amount: 0.4);
-    z-index: $places-item-hover;
+    z-index: $zindex-places-hover;
   }
 }
 

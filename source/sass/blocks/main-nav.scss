@@ -44,7 +44,7 @@
     right: 0;
     border: none;
     background-color: $basic-accent;
-    z-index: $menu-toggle;
+    z-index: $zindex-menu-toggle;
 
     &::before,
     &::after {
@@ -128,7 +128,7 @@
       padding-top: 134px;
       position: absolute;
       top: 0;
-      z-index: $menu-dropdown;
+      z-index: $zindex-menu-dropdown;
     }
 
     @media (max-width: $mobile-width) {

@@ -515,6 +515,27 @@
     </div>
   </footer>
 
+  <section class="modal modal--buy">
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <div class="modal__content">
+        <h2 class="modal__heading">Купить тур</h2>
+        <input class="modal__input" name="tel" type="tel" pattern="^\+7\d{3}\d{7}$"
+          placeholder="+7 Введите 10 цифр номера" value="+7" aria-label="Поле для ввода номера телефона" required>
+        <input class="modal__input" type="email" placeholder="E-mail"
+          aria-label="Поле для ввода адреса электронной почты">
+        <button class="modal__button button" type="submit">Отправить</button>
+    </form>
+    <button class="modal__close" aria-label="Закрыть окно"></button>
+    </div>
+
+  </section>
+
+  <section class="modal modal--success">
+    <h2 class="visually-hidden">Сообщение об успешной отправке</h2>
+    <p class="modal__success-text">Форма успешно отправлена, спасибо! :)</p>
+    <button class="modal__close" aria-label="Закрыть окно"></button>
+  </section>
+
   <script src="js/script.js"></script>
 
 </body>
