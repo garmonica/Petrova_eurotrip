@@ -25,7 +25,9 @@
     width: 288px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: $basic-accent-hover;
   }
 }

@@ -59,36 +59,31 @@ smoothLinks.forEach((link) => {
 });
 
 // СВАЙП:
-
 const tabletWidth = 1023;
-
 if (document.body.clientWidth < tabletWidth) {
   const swipeBlock = document.querySelector('.tabs__list');
   const swipeContainer = document.querySelector('.tabs');
   const swipeContainerLeftMargin = window.getComputedStyle(swipeBlock).getPropertyValue('margin').split(' ')[1].slice(0, -2);
   const swipeContainerSideMargins = parseInt(swipeContainerLeftMargin) * 2;
-
   let initialPosition = 0;
   let moving = false;
   let transform = 0;
   let transformValue = 0;
   let lastPageX = 0;
-
   const handleTouchStart = (evt) => {
-    initialPosition = evt.pageX;
+    initialPosition = evt.touches[0].pageX;
     moving = true;
     const transformMatrix = window.getComputedStyle(swipeBlock).getPropertyValue('transform');
     if (transformMatrix !== 'none') {
       transform = parseInt(transformMatrix.split(',')[4].trim());
     };
   };
-
   const handleTouchMove = (evt) => {
     if (moving) {
-      const currentPosition = evt.pageX;
+      const currentPosition = evt.touches[0].pageX;
       const diffX = currentPosition - initialPosition;
       transformValue = parseInt(transform) + diffX;
-      if (evt.pageX - lastPageX > 0) {
+      if (evt.touches[0].pageX - lastPageX > 0) {
         if (transformValue > 0) {
           return;
         }
@@ -99,14 +94,74 @@ if (document.body.clientWidth < tabletWidth) {
       }
       swipeBlock.style.transform = `translateX(${transformValue}px)`;
     }
-    lastPageX = evt.pageX;
+    lastPageX = evt.touches[0].pageX;
   };
-
   const handleTouchEnd = () => {
     moving = false;
   }
-
-  swipeBlock.addEventListener('pointerdown', handleTouchStart);
-  swipeBlock.addEventListener('pointermove', handleTouchMove);
-  swipeBlock.addEventListener('pointerup', handleTouchEnd);
+  swipeBlock.addEventListener('touchstart', handleTouchStart, { passive: true });
+  swipeBlock.addEventListener('touchmove', handleTouchMove, { passive: true });
+  swipeBlock.addEventListener('touchend', handleTouchEnd);
 }
+
+// ОТКРЫТИЕ МОДАЛЬНОГО ОКНА №1 КУПИТЬ ТУР:
+
+const buttonBuy = document.querySelectorAll('.button--buy');
+const buttonSubmit = document.querySelectorAll('.button--submit');
+
+const modalBuy = document.querySelector('.modal--buy');
+const modalSuccess = document.querySelector('.modal--success');
+const modalClose = document.querySelectorAll('.modal__close');
+
+const overlay = document.querySelector('.overlay');
+
+const openModal = (modalName) => {
+  modalName.classList.add('modal--show');
+  overlay.classList.add('overlay--add');
+}
+
+const closeModal = (modalName) => {
+  modalName.classList.remove('modal--show');
+  overlay.classList.remove('overlay--add');
+}
+
+buttonBuy.forEach((button) => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openModal(modalBuy);
+  });
+});
+
+buttonSubmit.forEach((button) => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openModal(modalSuccess);
+  });
+});
+
+modalClose.forEach((closebtn) => {
+  closebtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    closeModal(modalSuccess);
+    closeModal(modalBuy);
+  });
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.key === ('Escape' || 'Esc')) {
+    if (modalBuy.classList.contains('modal--show')) {
+      evt.preventDefault();
+      closeModal(modalBuy);
+    }
+    if (modalSuccess.classList.contains('modal--show')) {
+      evt.preventDefault();
+      closeModal(modalSuccess);
+    }
+  }
+});
+
+overlay.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  closeModal(modalBuy);
+  closeModal(modalSuccess);
+});

@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Путешествие по Европе</title>
+  <title>Way - Путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
 </head>
 
 <body class="page__body">
@@ -53,74 +54,84 @@
       <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="places__list">
         <li class="places__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/places/places-greece-mobile.webp 1x, img/places/places-greece-mobile@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/places/places-greece-desktop.webp 1x, img/places/places-greece-desktop@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/places/places-greece-mobile.jpg 1x, img/places/places-greece-mobile@2x.jpg 2x">
-            <img class="places__image" src="img/places/places-greece-desktop.jpg"
-              srcset="img/places/places-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
-          </picture>
-          <h3 class="places__title">Греция</h3>
-          <a class="places__link" href="#countries" data-tab="greece">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="greece">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/places/places-greece-mobile.webp 1x, img/places/places-greece-mobile@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/places/places-greece-desktop.webp 1x, img/places/places-greece-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/places/places-greece-mobile.jpg 1x, img/places/places-greece-mobile@2x.jpg 2x">
+              <img class="places__image" src="img/places/places-greece-desktop.jpg"
+                srcset="img/places/places-greece-desktop@2x.jpg 2x" alt="Вилла на скалах в Греции">
+            </picture>
+            <h3 class="places__title">Греция</h3>
+            <p class="places__message">Смотреть подробнее</p>
+          </a>
         </li>
         <li class="places__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/places/places-albania-mobile.webp 1x, img/places/places-albania-mobile@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/places/places-albania-desktop.webp 1x, img/places/places-albania-desktop@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/places/places-albania-mobile.jpg 1x, img/places/places-albania-mobile@2x.jpg 2x">
-            <img class="places__image" src="img/places/places-albania-desktop.jpg"
-              srcset="img/places/places-albania-desktop@2x.jpg 2x" alt="Вид с воздуха на залив Албании">
-          </picture>
-          <h3 class="places__title">Албания</h3>
-          <a class="places__link" href="#countries" data-tab="albania">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="albania">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/places/places-albania-mobile.webp 1x, img/places/places-albania-mobile@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/places/places-albania-desktop.webp 1x, img/places/places-albania-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/places/places-albania-mobile.jpg 1x, img/places/places-albania-mobile@2x.jpg 2x">
+              <img class="places__image" src="img/places/places-albania-desktop.jpg"
+                srcset="img/places/places-albania-desktop@2x.jpg 2x" alt="Вид с воздуха на залив Албании">
+            </picture>
+            <h3 class="places__title">Албания</h3>
+            <p class="places__message">Смотреть подробнее</p>
+          </a>
         </li>
         <li class="places__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/places/places-macedonia-mobile.webp 1x, img/places/places-macedonia-mobile@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/places/places-macedonia-desktop.webp 1x, img/places/places-macedonia-desktop@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/places/places-macedonia-mobile.jpg 1x, img/places/places-macedonia-mobile@2x.jpg 2x">
-            <img class="places__image" src="img/places/places-macedonia-desktop.jpg"
-              srcset="img/places/places-macedonia-desktop@2x.jpg 2x" alt="Достопримечательность в Македонии">
-          </picture>
-          <h3 class="places__title">Македония</h3>
-          <a class="places__link" href="#countries" data-tab="macedonia">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="macedonia">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/places/places-macedonia-mobile.webp 1x, img/places/places-macedonia-mobile@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/places/places-macedonia-desktop.webp 1x, img/places/places-macedonia-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/places/places-macedonia-mobile.jpg 1x, img/places/places-macedonia-mobile@2x.jpg 2x">
+              <img class="places__image" src="img/places/places-macedonia-desktop.jpg"
+                srcset="img/places/places-macedonia-desktop@2x.jpg 2x" alt="Достопримечательность в Македонии">
+            </picture>
+            <h3 class="places__title">Македония</h3>
+            <p class="places__message">Смотреть подробнее</p>
+          </a>
         </li>
         <li class="places__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/places/places-montenegro-mobile.webp 1x, img/places/places-montenegro-mobile@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/places/places-montenegro-desktop.webp 1x, img/places/places-montenegro-desktop@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/places/places-montenegro-mobile.jpg 1x, img/places/places-montenegro-mobile@2x.jpg 2x">
-            <img class="places__image" src="img/places/places-montenegro-desktop.jpg"
-              srcset="img/places/places-montenegro-desktop@2x.jpg 2x" alt="Лесная река в Черногории">
-          </picture>
-          <h3 class="places__title">Черногория</h3>
-          <a class="places__link" href="#countries" data-tab="montenegro">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="montenegro">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/places/places-montenegro-mobile.webp 1x, img/places/places-montenegro-mobile@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/places/places-montenegro-desktop.webp 1x, img/places/places-montenegro-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/places/places-montenegro-mobile.jpg 1x, img/places/places-montenegro-mobile@2x.jpg 2x">
+              <img class="places__image" src="img/places/places-montenegro-desktop.jpg"
+                srcset="img/places/places-montenegro-desktop@2x.jpg 2x" alt="Лесная река в Черногории">
+            </picture>
+            <h3 class="places__title">Черногория</h3>
+            <p class="places__message">Смотреть подробнее</p>
+          </a>
         </li>
         <li class="places__item">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/places/places-croatia-mobile.webp 1x, img/places/places-croatia-mobile@2x.webp 2x">
-            <source type="image/webp"
-              srcset="img/places/places-croatia-desktop.webp 1x, img/places/places-croatia-desktop@2x.webp 2x">
-            <source media="(max-width: 1023px)"
-              srcset="img/places/places-croatia-mobile.jpg 1x, img/places/places-croatia-mobile@2x.jpg 2x">
-            <img class="places__image" src="img/places/places-croatia-desktop.jpg"
-              srcset="img/places/places-croatia-desktop@2x.jpg 2x" alt="В пещере Хорватии">
-          </picture>
-          <h3 class="places__title">Хорватия</h3>
-          <a class="places__link" href="#countries" data-tab="croatia">Смотреть подробнее</a>
+          <a class="places__link" href="#countries" data-tab="croatia">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/places/places-croatia-mobile.webp 1x, img/places/places-croatia-mobile@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/places/places-croatia-desktop.webp 1x, img/places/places-croatia-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)"
+                srcset="img/places/places-croatia-mobile.jpg 1x, img/places/places-croatia-mobile@2x.jpg 2x">
+              <img class="places__image" src="img/places/places-croatia-desktop.jpg"
+                srcset="img/places/places-croatia-desktop@2x.jpg 2x" alt="В пещере Хорватии">
+            </picture>
+            <h3 class="places__title">Хорватия</h3>
+            <p class="places__message">Смотреть подробнее</p>
+          </a>
         </li>
       </ul>
     </section>
@@ -158,7 +169,7 @@
                 путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в
                 высоту
                 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-              <a class="countries__button button" href="">Купить тур сейчас</a>
+              <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
             <div class="countries__wrapper">
               <div class="countries__review review">
@@ -203,7 +214,7 @@
                 слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до
                 такого
                 мелкого состояния. </p>
-              <a class="countries__button button" href="">Купить тур сейчас</a>
+              <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
             <div class="countries__wrapper">
               <div class="countries__review review">
@@ -243,7 +254,7 @@
                 заберемся
                 на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.
               </p>
-              <a class="countries__button button" href="">Купить тур сейчас</a>
+              <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
             <div class="countries__wrapper">
               <div class="countries__review review">
@@ -285,7 +296,7 @@
                 некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
                 каньона
                 составляет 80 км.</p>
-              <a class="countries__button button" href="">Купить тур сейчас</a>
+              <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
             <div class="countries__wrapper">
               <div class="countries__review review">
@@ -324,7 +335,7 @@
                 мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
                 нерукотворными
                 скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-              <a class="countries__button button" href="">Купить тур сейчас</a>
+              <a class="countries__button button button--buy" href="">Купить тур сейчас</a>
             </div>
             <div class="countries__wrapper">
               <div class="countries__review review">
@@ -409,7 +420,7 @@
               Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
-          <a class="tours__button button" href="">купить тур сейчас</a>
+          <a class="tours__button button button--buy" href="">купить тур сейчас</a>
         </li>
         <li class="tours__item">
           <div class="tours__wrapper">
@@ -449,7 +460,7 @@
               Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
-          <a class="tours__button button" href="">купить тур сейчас</a>
+          <a class="tours__button button button--buy" href="">купить тур сейчас</a>
         </li>
       </ul>
     </section>
@@ -466,7 +477,7 @@
             <input class="feedback__input" type="email" placeholder="E-mail"
               aria-label="Поле для ввода адреса электронной почты">
           </div>
-          <button class="feedback__button button" type="submit">Отправить</button>
+          <button class="feedback__button button button--submit" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -515,26 +526,29 @@
     </div>
   </footer>
 
+  <div class="overlay"></div>
+
   <section class="modal modal--buy">
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <div class="modal__content">
+    <div class="modal__content">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+
         <h2 class="modal__heading">Купить тур</h2>
         <input class="modal__input" name="tel" type="tel" pattern="^\+7\d{3}\d{7}$"
           placeholder="+7 Введите 10 цифр номера" value="+7" aria-label="Поле для ввода номера телефона" required>
         <input class="modal__input" type="email" placeholder="E-mail"
           aria-label="Поле для ввода адреса электронной почты">
-        <button class="modal__button button" type="submit">Отправить</button>
-    </form>
-    <button class="modal__close" aria-label="Закрыть окно"></button>
+        <button class="modal__button button button--submit" type="submit">Отправить</button>
+
+      </form>
     </div>
-
+    <button class="modal__close" aria-label="Закрыть окно"></button>
   </section>
-
   <section class="modal modal--success">
     <h2 class="visually-hidden">Сообщение об успешной отправке</h2>
     <p class="modal__success-text">Форма успешно отправлена, спасибо! :)</p>
     <button class="modal__close" aria-label="Закрыть окно"></button>
   </section>
+
 
   <script src="js/script.min.js"></script>
 

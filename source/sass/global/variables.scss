@@ -16,10 +16,11 @@ $bg-modal: #e3e4ea;
 $tablet-width: 1023px;
 $mobile-width: 767px;
 // z-index
-$zindex-modal: 120;
+$zindex-modal: 130;
+$zindex-overlay: 120;
 $zindex-menu-toggle: 110;
 $zindex-menu-dropdown: 100;
-$zindex-places-link: 90;
+$zindex-places-message: 90;
 $zindex-places-hover: 80;
 $zindex-countries: 90;
 $zindex-countries-image: 80;
