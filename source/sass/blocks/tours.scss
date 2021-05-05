@@ -50,8 +50,8 @@
     border-color: transparentize($color: $basic-accent, $amount: 0.5);
   }
 
-  .tours__services-item {
-    background: url("../img/icon-check-red.svg") 0 7px no-repeat;
+  .tours__services-icon {
+    fill: $basic-accent;
   }
 }
 
@@ -117,11 +117,17 @@
   font-size: 16px;
   line-height: 30px;
   color: $basic-dark;
-  background: url("../img/icon-check-dark.svg") 0 7px no-repeat;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 14px;
   }
+}
+
+.tours__services-icon {
+  position: absolute;
+  top: 7px;
+  left: 3px;
 }
 
 .tours__button {

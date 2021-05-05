@@ -1,5 +1,9 @@
 .next-trips {
+  margin-left: 13px;
+  padding-right: 40px;
+
   @media (max-width: $tablet-width) {
+    margin-left: 0;
     padding-right: 48px;
     border-right: 1px solid $line-grey;
   }
@@ -8,6 +12,7 @@
     padding-right: 0;
     padding-bottom: 15px;
     margin-bottom: 28px;
+    margin-left: -10px;
     border-right: none;
     border-bottom: 1px solid $line-grey;
   }

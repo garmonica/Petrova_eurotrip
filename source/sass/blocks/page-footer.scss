@@ -1,4 +1,4 @@
-.page-footer {
+.page-footer__container {
   display: flex;
   justify-content: space-between;
   padding-top: 75px;
@@ -6,6 +6,7 @@
 
   @media (max-width: $tablet-width) {
     flex-wrap: wrap;
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -18,7 +19,6 @@
 }
 
 .page-footer__section {
-  width: calc(100% / 3);
   border-right: 1px solid $line-grey;
 
   @media (max-width: $tablet-width) {

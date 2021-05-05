@@ -4,12 +4,13 @@
 
   @media (max-width: $tablet-width) {
     min-height: auto;
-    margin-bottom: 82px;
+    margin-bottom: 37px;
+    padding-bottom: 0;
     background: none;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 56px;
+    margin-bottom: 11px;
   }
 }
 
@@ -31,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
 
   @media (max-width: $tablet-width) {
     display: block;
@@ -92,27 +93,28 @@
 
 .countries__image {
   position: absolute;
-  top: -15px;
+  top: 0;
   left: 0;
   z-index: $countries-image;
 
   @media (max-width: $tablet-width) {
-    top: 0;
     width: 100%;
     object-fit: contain;
   }
 }
 
 .countries__wrapper {
-  min-height: 580px;
+  min-height: 595px;
   flex-grow: 1;
   position: relative;
+  align-self: flex-start;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   @media (max-width: $tablet-width) {
     display: block;
+    min-height: 0;
     padding-top: 77px;
     overflow: hidden;
   }
