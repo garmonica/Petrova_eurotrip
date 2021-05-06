@@ -1,10 +1,9 @@
 'use strict';
 
-// МЕНЮ:
-var mainNav = document.querySelector('.main-nav');
-var menuToggle = document.querySelector('.main-nav__toggle');
+const mainNav = document.querySelector('.main-nav');
+const menuToggle = document.querySelector('.main-nav__toggle');
 mainNav.classList.remove('main-nav--nojs');
-menuToggle.addEventListener('click', function () {
+menuToggle.addEventListener('click', () => {
   if (mainNav.classList.contains('main-nav--closed')) {
     mainNav.classList.remove('main-nav--closed');
     mainNav.classList.add('main-nav--opened');
@@ -14,7 +13,6 @@ menuToggle.addEventListener('click', function () {
   }
 });
 
-// ПЕРЕКЛЮЧЕНИЕ ТАБОВ:
 const tabs = document.querySelectorAll('.tabs__link');
 tabs.forEach((tab) => {
   tab.addEventListener('click', (evt) => {
@@ -28,7 +26,6 @@ tabs.forEach((tab) => {
   });
 });
 
-// ПЕРЕКЛЮЧЕНИЕ ТАБОВ ПРИ КЛИКЕ СМОТРЕТЬ ПОДРОБНЕЕ:
 const placesLinks = document.querySelectorAll('.places__link');
 placesLinks.forEach((elem) => {
   elem.addEventListener('click', () => {
@@ -45,7 +42,6 @@ placesLinks.forEach((elem) => {
   });
 });
 
-// ПЛАВНЫЙ СКРОЛЛ ССЫЛОК-ЯКОРЕЙ:
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 smoothLinks.forEach((link) => {
   link.addEventListener('click', (evt) => {
@@ -58,7 +54,6 @@ smoothLinks.forEach((link) => {
   });
 });
 
-// СВАЙП:
 const tabletWidth = 1023;
 if (document.body.clientWidth < tabletWidth) {
   const swipeBlock = document.querySelector('.tabs__list');
@@ -104,8 +99,6 @@ if (document.body.clientWidth < tabletWidth) {
   swipeBlock.addEventListener('touchend', handleTouchEnd);
 }
 
-// ОТКРЫТИЕ МОДАЛЬНОГО ОКНА №1 КУПИТЬ ТУР:
-
 const buttonBuy = document.querySelectorAll('.button--buy');
 const buttonSubmit = document.querySelectorAll('.button--submit');
 
@@ -114,6 +107,11 @@ const modalSuccess = document.querySelector('.modal--success');
 const modalClose = document.querySelectorAll('.modal__close');
 
 const overlay = document.querySelector('.overlay');
+
+const inputs = document.querySelectorAll('.input');
+const inputTel = document.querySelectorAll('.input--tel');
+const inputEmail = document.querySelectorAll('.input--email');
+const inputError = document.querySelectorAll('.input-wrapper__error');
 
 const openModal = (modalName) => {
   modalName.classList.add('modal--show');
@@ -125,17 +123,11 @@ const closeModal = (modalName) => {
   overlay.classList.remove('overlay--add');
 }
 
-buttonBuy.forEach((button) => {
+buttonBuy.forEach((button, i) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
     openModal(modalBuy);
-  });
-});
-
-buttonSubmit.forEach((button) => {
-  button.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    openModal(modalSuccess);
+    inputTel.forEach((tel) => tel.focus());
   });
 });
 
@@ -164,4 +156,33 @@ overlay.addEventListener('click', (evt) => {
   evt.preventDefault();
   closeModal(modalBuy);
   closeModal(modalSuccess);
+});
+
+buttonSubmit.forEach((button, i) => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (!inputTel[i].value || !inputEmail[i].value) {
+      evt.preventDefault();
+    } else {
+      openModal(modalSuccess);
+    }
+  });
+});
+
+inputTel.forEach((tel) => {
+  tel.addEventListener('focus', (evt) => {
+    evt.target.value = '+7';
+  });
+});
+
+inputs.forEach((input, i) => {
+  input.addEventListener('input', (evt) => {
+    if (input.checkValidity() === false) {
+      evt.target.style.borderColor = '#fe7865';
+      inputError[i].classList.add('input-wrapper__error--show');
+    } else {
+      evt.target.style.borderColor = '';
+      inputError[i].classList.remove('input-wrapper__error--show');
+    }
+  });
 });

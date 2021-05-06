@@ -21,6 +21,10 @@
   background-size: contain;
   display: none;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-modal-desktop@2x.jpg");
+  }
+
   @media (max-width: $mobile-width) {
     background-image: none;
   }
@@ -35,6 +39,7 @@
   padding: 70px 60px 90px;
   text-align: center;
   background-color: $bg-light-grey;
+  flex-grow: 1;
 
   @media (max-width: $mobile-width) {
     display: flex;
@@ -53,26 +58,6 @@
   line-height: 43px;
   font-weight: 600;
   color: $additional-dark;
-}
-
-.modal__input {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  padding: 15px;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 17px;
-  color: $additional-dark;
-  border: 1px solid $line-grey;
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 20px;
-  }
-
-  &::placeholder {
-    color: $additional-dark;
-  }
 }
 
 .modal__button {

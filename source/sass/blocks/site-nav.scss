@@ -50,7 +50,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $basic-accent;
   }
 }

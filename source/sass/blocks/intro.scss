@@ -1,14 +1,20 @@
 .intro {
   min-height: 860px;
   margin-bottom: 200px;
-  background: $bg-intro url("../img/bg-intro-desktop.jpg") center top no-repeat;
-  background-size: cover;
+  background: $bg-intro url("../img/bg-intro-desktop.jpg") center top / cover no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-intro-desktop@2x.jpg");
+  }
 
   @media (max-width: $tablet-width) {
     min-height: 344px;
     margin-bottom: 80px;
-    background: $bg-intro url("../img/bg-intro-tablet.jpg") center top no-repeat;
-    background-size: cover;
+    background: $bg-intro url("../img/bg-intro-tablet.jpg") center top / cover no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro-tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -70,6 +76,10 @@
     line-height: 36px;
     background: $bg-intro url("../img/bg-intro-mobile.jpg") center top no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro-mobile@2x.jpg");
+    }
   }
 }
 
