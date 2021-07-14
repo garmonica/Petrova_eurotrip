@@ -1,4 +1,6 @@
 'use strict';
+
+// открытие закрытие меню
 const mainNav = document.querySelector('.main-nav');
 const menuToggle = document.querySelector('.main-nav__toggle');
 mainNav.classList.remove('main-nav--nojs');
@@ -12,6 +14,7 @@ menuToggle.addEventListener('click', () => {
   }
 });
 
+// переключение табов
 const tabs = document.querySelectorAll('.tabs__link');
 tabs.forEach((tab) => {
   tab.addEventListener('click', (evt) => {
@@ -25,6 +28,7 @@ tabs.forEach((tab) => {
   });
 });
 
+// переключение табов при клике на ссылки раздела Места посещения (выше табов)
 const placesLinks = document.querySelectorAll('.places__link');
 placesLinks.forEach((elem) => {
   elem.addEventListener('click', () => {
@@ -41,6 +45,7 @@ placesLinks.forEach((elem) => {
   });
 });
 
+// плавный скролл
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 smoothLinks.forEach((link) => {
   link.addEventListener('click', (evt) => {
@@ -53,6 +58,7 @@ smoothLinks.forEach((link) => {
   });
 });
 
+// свайп - планшет и мобила
 const tabletWidth = 1023;
 if (document.body.clientWidth < tabletWidth) {
   const swipeBlock = document.querySelector('.tabs__list');
@@ -98,6 +104,7 @@ if (document.body.clientWidth < tabletWidth) {
   swipeBlock.addEventListener('touchend', handleTouchEnd);
 }
 
+// открытие модалок
 const buttonBuy = document.querySelectorAll('.button--buy');
 const buttonSubmit = document.querySelectorAll('.button--submit');
 
@@ -107,10 +114,13 @@ const modalClose = document.querySelectorAll('.modal__close');
 
 const overlay = document.querySelector('.overlay');
 
+const forms = document.querySelectorAll('form');
+
 const inputs = document.querySelectorAll('.input');
-const inputTel = document.querySelectorAll('.input--tel');
-const inputEmail = document.querySelectorAll('.input--email');
-const inputError = document.querySelectorAll('.input-wrapper__error');
+const inputTels = document.querySelectorAll('.input--tel');
+const inputEmails = document.querySelectorAll('.input--email');
+
+const inputErrors = document.querySelectorAll('.input-wrapper__error');
 
 const openModal = (modalName) => {
   modalName.classList.add('modal--show');
@@ -122,14 +132,25 @@ const closeModal = (modalName) => {
   overlay.classList.remove('overlay--add');
 }
 
-buttonBuy.forEach((button, i) => {
+// открытие модалок по клику оп кнопки Купить тур сейчас
+buttonBuy.forEach((button) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
     openModal(modalBuy);
-    inputTel.forEach((tel) => tel.focus());
+    // если поле телефон не заполнено фокус на него
+    // иначе если телефон есть, а поле эл.почта не заполнено, фокус на него
+    // а если оба заполнены, то фокуса не будет нигде
+    for (let i = 0; i < forms.length; i++) {
+      if (!inputTels[i].value) {
+        inputTels[i].focus();
+      } else if (!inputEmails[i].value) {
+        inputEmails[i].focus();
+      }
+    }
   });
 });
 
+// закрытие модалок по клику на кнопку-крестик
 modalClose.forEach((closebtn) => {
   closebtn.addEventListener('click', (evt) => {
     evt.preventDefault();
@@ -138,6 +159,7 @@ modalClose.forEach((closebtn) => {
   });
 });
 
+// закрытие модалок по Esc
 window.addEventListener('keydown', (evt) => {
   if (evt.key === ('Escape' || 'Esc')) {
     if (modalBuy.classList.contains('modal--show')) {
@@ -151,37 +173,74 @@ window.addEventListener('keydown', (evt) => {
   }
 });
 
+// закрытие модалок по клику на оверлей
 overlay.addEventListener('click', (evt) => {
   evt.preventDefault();
   closeModal(modalBuy);
   closeModal(modalSuccess);
 });
 
-buttonSubmit.forEach((button, i) => {
-  button.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    if (!inputTel[i].value || !inputEmail[i].value) {
-      evt.preventDefault();
-    } else {
-      openModal(modalSuccess);
+// при фокусировке на поле тел. ставим +7, при разфокусировке убираем
+inputTels.forEach((tel) => {
+  tel.addEventListener('focus', (evt) => {
+    if (!tel.value) {
+      evt.target.value = '+7';
+    }
+  });
+
+  tel.addEventListener('blur', (evt) => {
+    if (tel.value === '+7') {
+      evt.target.value = '';
     }
   });
 });
 
-inputTel.forEach((tel) => {
-  tel.addEventListener('focus', (evt) => {
-    evt.target.value = '+7';
-  });
-});
-
+// проверка валидности всех полей, если не валидно показываем сообщение Данные не верны + красная рамка
 inputs.forEach((input, i) => {
   input.addEventListener('input', (evt) => {
     if (input.checkValidity() === false) {
       evt.target.style.borderColor = '#fe7865';
-      inputError[i].classList.add('input-wrapper__error--show');
+      inputErrors[i].classList.add('input-wrapper__error--show');
     } else {
       evt.target.style.borderColor = '';
-      inputError[i].classList.remove('input-wrapper__error--show');
+      inputErrors[i].classList.remove('input-wrapper__error--show');
     }
   });
 });
+
+// Local Storage
+
+let isStorageSupport = true;
+let storageTel = '';
+let storageEmail = '';
+
+try {
+  storageTel = localStorage.getItem('tel');
+  storageEmail = localStorage.getItem('email');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+if (storageTel || storageEmail) {
+  inputTels.forEach(tel => tel.value = storageTel);
+  inputEmails.forEach(email => email.value = storageEmail);
+}
+
+// форма отправляется, если поле с телефоном заполнено -
+// в таком случае записываем значения в Local Storage и показываем модалку об успехе
+forms.forEach((form, i) => {
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    if (!inputTels[i].value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('tel', inputTels[i].value);
+        localStorage.setItem('email', inputEmails[i].value);
+      }
+
+      openModal(modalSuccess);
+    }
+  });
+})

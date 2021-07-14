@@ -86,7 +86,6 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/img/**/*.{jpg,png,svg}",
-    "source/js/**",
   ], {
     base: "source"
   })
@@ -95,6 +94,20 @@ const copy = (done) => {
 }
 
 exports.copy = copy;
+
+// Scripts
+
+const scripts = (done) => {
+  gulp.src([
+    "source/js/**",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+  done();
+}
+
+exports.scripts = scripts;
 
 // Clean
 
@@ -130,6 +143,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/**/*.js", gulp.series(scripts, reload));
 }
 
 // Build
@@ -156,6 +170,7 @@ exports.default = gulp.series(
     html,
     sprite,
     copy,
+    scripts,
     createWebp
   ),
   gulp.series(
